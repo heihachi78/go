@@ -4,11 +4,10 @@ package main
 
 import (
 	"fmt"
-
+	"log"
 	"tutorial/greetings"
 
-	"log"
-
+	"golang.org/x/example/hello/reverse"
 	"rsc.io/quote"
 )
 
@@ -23,5 +22,6 @@ func main() {
 	for _, message := range messages {
 		fmt.Println(message)
 	}
-	fmt.Println(quote.Go())
+	fmt.Println(reverse.String(quote.Go()))
+	fmt.Println(reverse.Int(24601))
 }
